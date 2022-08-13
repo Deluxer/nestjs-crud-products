@@ -11,7 +11,7 @@ CRUD products API using nestjs, include pagination
 2. ```yarn install```
 3. Copy ```.env.example``` to ```.env```
 4. Set environment variables
-5. Create database (posgreSql)
+5. Create database (postgreSql)
 ```
 docker-compose up -d
 ```
@@ -23,8 +23,8 @@ yarn start:dev
 
 
 ## Stack
-* Node
-* Framework Nest
-* PosgreSQL
+* [Node](https://nodejs.org/en/)
+* [Framework Nest](https://nestjs.com/)
+* PostgreSql
 
 Endpoint Documentation [Teslo API](https://documenter.getpostman.com/view/1703362/VUjSFiau)
