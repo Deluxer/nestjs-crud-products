@@ -34,4 +34,22 @@ export class CreateProductDto {
     @IsArray()
     @IsOptional()
     tags?: string[];
+
+    @IsString({each: true})
+    @IsOptional()
+    images: string[]
+
+    // constructor(
+    //     title: string,
+    //     price?: number,
+    //     description?: string,
+    //     slug?: string,
+    //     stock?: number,
+    //     sizes?: string[],
+    //     gender?: string,
+    //     tags?: string[],
+    //     images?: string[]
+    // ) {
+    // }
+
 }

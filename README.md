@@ -15,7 +15,13 @@ CRUD products API using nestjs, include pagination
 ```
 docker-compose up -d
 ```
-6. Start
+
+6. Seed, population database
+```
+{url}/api/seed
+```
+
+7. Start
 ```
 yarn start:dev
 ```
