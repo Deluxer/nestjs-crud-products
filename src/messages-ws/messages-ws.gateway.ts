@@ -37,15 +37,15 @@ export class MessagesWsGateway implements OnGatewayConnection, OnGatewayDisconne
   @SubscribeMessage('message-from-client')
   onMessageFromClient(client: Socket, payload: NewMessageDto) {
     
-    // client.emit('message-from-server', {
-    //   fullName: 'Soy yo',
-    //   message: payload.message || 'No message'
-    // })
+    client.emit('message-from-server', {
+      fullName: 'Soy yo',
+      message: payload.message || 'No message'
+    })
 
-    // client.broadcast.emit('message-from-server', {
-    //   fullName: 'Soy yo',
-    //   message: payload.message || 'No message'
-    // })
+    client.broadcast.emit('message-from-server', {
+      fullName: 'Soy yo',
+      message: payload.message || 'No message'
+    })
 
 
     this.wss.emit('message-from-server', {
@@ -56,9 +56,5 @@ export class MessagesWsGateway implements OnGatewayConnection, OnGatewayDisconne
     // this.wss.to()
     // client.join('sales')
     // this.wss.to('sales')
-
-
   }
-
-
 }
